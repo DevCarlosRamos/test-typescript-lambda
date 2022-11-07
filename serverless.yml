@@ -1,0 +1,12 @@
+service: test-mongodb
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+functions:
+  api:
+    handler: build/index.handler
+    events:
+      - httpApi: "*"
